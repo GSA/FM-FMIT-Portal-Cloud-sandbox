@@ -14,7 +14,20 @@ namespace ASP_Core_MVC_Template
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            /// CreateWebHostBuilder(args).Build().Run();
+
+            var config = new ConfigurationBuilder()
+                    .AddCommandLine(args)
+                    .Build();
+
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseConfiguration(config)
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<Startup>()
+                .Build();
+            host.Run();
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
