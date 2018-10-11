@@ -1,0 +1,9 @@
+---
+applications:
+- name: FMITRPT
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git
+  random-route: true
+  memory: 512M
+  env:
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
