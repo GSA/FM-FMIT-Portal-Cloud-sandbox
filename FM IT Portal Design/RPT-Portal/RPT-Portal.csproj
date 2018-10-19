@@ -13,7 +13,6 @@
     <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\uswds-2.0.0\css\uswds.css" />
     <Content Remove="wwwroot\uswds-2.0.0\img\alerts\error.png" />
   </ItemGroup>
 </Project>
