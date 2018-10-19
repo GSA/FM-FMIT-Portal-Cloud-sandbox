@@ -14,5 +14,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\uswds-2.0.0\img\alerts\error.png" />
+    <Content Remove="Views\Home\UnderConstruction.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\Home\WIP.cshtml.cs" />
   </ItemGroup>
 </Project>
