@@ -1,6 +1,6 @@
 ---
 applications:
-- name: FMITRPT
+- name: FMIT-SERVICES
   buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git
   random-route: true
   memory: 512M
