@@ -1,12 +1,9 @@
 ---
 applications:
 - name: FMIT-SERVICES
-  buildpacks:
-    - https://github.com/cloudfoundry/dotnet-core-buildpack.git
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git
   random-route: true
   memory: 512M
-  disk_quota: 1024M
-  health-check-type: http
   env:
     DOTNET_CLI_TELEMETRY_OPTOUT: 1
     DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true

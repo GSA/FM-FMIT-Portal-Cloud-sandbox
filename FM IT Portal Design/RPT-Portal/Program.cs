@@ -23,7 +23,6 @@ namespace ASP_Core_MVC_Template
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseConfiguration(config)
-                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
             host.Run();
