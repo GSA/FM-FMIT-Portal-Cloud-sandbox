@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeIdentifiers>rhel-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Login\" />
+    <Folder Include="appsettings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\uswds-2.0.0\img\alerts\error.png" />
