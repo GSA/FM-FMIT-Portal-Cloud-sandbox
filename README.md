@@ -13,9 +13,9 @@ These instructions will get you a copy of the project up and running on your loc
 - C#
 - JQuery
 - United States Web Design System
-- .NET MVC
+- ASP.NET Core MVC
 - CSS
-- HTML
+- HTML5
 
 ## Authors
 
