@@ -4,10 +4,15 @@ General Services Administration Financial Management IT web portal
 ### Key Functions 
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See Installing on how to deploy the project on a live system.
 
 ### Prerequisites
 - Visual Studio 2017
+
+### Installing
+1. Download and install the prerequisite software
+2. Download FM IT Portal source code or folk this repo
+3. Build RPT-Portal solution in Visual Studio
 
 ## Built With
 - C#
