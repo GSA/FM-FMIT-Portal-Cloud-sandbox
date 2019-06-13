@@ -2,7 +2,7 @@
 General Services Administration Financial Management IT web portal. 
 
 ### Key Functions 
-GSA Financial Management (FM) communities uses FM IT portal as a primary web site to access all internal FM systems.
+GSA Financial Management (FM) communities use FM IT portal as a primary web site to access all internal FM systems.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See Installing on how to deploy the project on a live system.
