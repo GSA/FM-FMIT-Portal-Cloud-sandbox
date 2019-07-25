@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Built With
 - C#
 - JQuery
-- [United States Web Design System](https://designsystem.digital.gov)
+- [United States Web Design System 2](https://designsystem.digital.gov)
 - ASP.NET Core MVC
 - CSS
 - HTML5
