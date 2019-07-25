@@ -8,7 +8,7 @@ GSA Financial Management (FM) communities use FM IT portal as a primary web site
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See Installing on how to deploy the project on a live system.
 
 ### Prerequisites
-- Visual Studio 2017 or Visual Studio 2019
+- Visual Studio 2017 or higher
 - .NET Core SDK 2.1 or higher
 
 ### Installing
@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Built With
 - C#
 - JQuery
-- United States Web Design System
+- [United States Web Design System](https://designsystem.digital.gov)
 - ASP.NET Core MVC
 - CSS
 - HTML5
