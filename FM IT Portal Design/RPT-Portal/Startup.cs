@@ -43,7 +43,10 @@ namespace ASP_Core_MVC_Template
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+				// UsePathBase Middleware
+				app.UsePathBase("/PORTAL");
+
+				app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles();

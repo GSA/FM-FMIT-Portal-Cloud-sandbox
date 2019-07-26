@@ -31,6 +31,11 @@ namespace ASP_Core_MVC_Template
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+			.ConfigureAppConfiguration((hostingContext, config) =>
+			{
+				config.SetBasePath(Environment.GetEnvironmentVariable("APPSETTINGS_DIRECTORY"));
+				config.AddJsonFile("PORTAL_appsettings.json", optional: false, reloadOnChange: true);
+			})
+				.UseStartup<Startup>();
     }
 }
