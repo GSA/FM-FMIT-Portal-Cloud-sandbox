@@ -8,32 +8,44 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace ASP_Core_MVC_Template
+namespace GSA.FMITPortal
 {
     public class Program
     {
-        public static void Main(string[] args)
+        /// <summary>
+		/// 
+		/// </summary>
+		/// <param name="args"></param>
+		public static void Main(string[] args)
         {
-            /// CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();
 
-            var config = new ConfigurationBuilder()
-                    .AddCommandLine(args)
-                    .Build();
+			//var config = new ConfigurationBuilder()
+			//		.AddCommandLine(args)
+			//		.Build();
 
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseConfiguration(config)
-                .UseStartup<Startup>()
-                .Build();
-            host.Run();
+			//var host = new WebHostBuilder()
+			//	.UseKestrel()
+			//	.UseConfiguration(config)
+			//	.UseStartup<Startup>()
+			//	.Build();
+			//host.Run();
 
-        }
+		}
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
 			.ConfigureAppConfiguration((hostingContext, config) =>
 			{
-				config.SetBasePath(Environment.GetEnvironmentVariable("APPSETTINGS_DIRECTORY"));
+				var appsettingsDirectory = Environment.GetEnvironmentVariable("APPSETTINGS_DIRECTORY");
+				if (String.IsNullOrEmpty(appsettingsDirectory))
+				{
+					// Default to appsettings within the app.
+					string[] paths = { hostingContext.HostingEnvironment.ContentRootPath, "appsettings" };
+					appsettingsDirectory = Path.Combine(paths);
+				}
+
+				config.SetBasePath(appsettingsDirectory);
 				config.AddJsonFile("PORTAL_appsettings.json", optional: false, reloadOnChange: true);
 			})
 				.UseStartup<Startup>();

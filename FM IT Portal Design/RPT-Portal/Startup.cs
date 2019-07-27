@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ASP_Core_MVC_Template
+namespace GSA.FMITPortal
 {
     public class Startup
     {
