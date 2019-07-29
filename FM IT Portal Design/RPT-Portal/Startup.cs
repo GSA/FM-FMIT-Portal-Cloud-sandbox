@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ASP_Core_MVC_Template
+namespace GSA.FMITPortal
 {
     public class Startup
     {
@@ -43,7 +43,10 @@ namespace ASP_Core_MVC_Template
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+				// UsePathBase Middleware
+				//app.UsePathBase("/PORTAL");
+
+				app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles();

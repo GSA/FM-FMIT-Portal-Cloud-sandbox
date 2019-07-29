@@ -8,29 +8,30 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace ASP_Core_MVC_Template
+namespace GSA.FMITPortal
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            /// CreateWebHostBuilder(args).Build().Run();
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			CreateWebHostBuilder(args).Build().Run();
 
-            var config = new ConfigurationBuilder()
-                    .AddCommandLine(args)
-                    .Build();
+			// The following code is for cloud.gov
+			//var config = new ConfigurationBuilder()
+			//        .AddCommandLine(args)
+			//        .Build();
 
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseConfiguration(config)
-                .UseStartup<Startup>()
-                .Build();
-            host.Run();
+			//var host = new WebHostBuilder()
+			//    .UseKestrel()
+			//    .UseConfiguration(config)
+			//    .UseStartup<Startup>()
+			//    .Build();
+			//host.Run();
 
-        }
+		}
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-    }
+		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+			WebHost.CreateDefaultBuilder(args)
+				.UseStartup<Startup>();
+	}
 }
