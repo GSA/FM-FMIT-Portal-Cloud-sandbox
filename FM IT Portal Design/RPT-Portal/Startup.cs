@@ -44,7 +44,7 @@ namespace GSA.FMITPortal
             else
             {
 				// UsePathBase Middleware
-				app.UsePathBase("/PORTAL");
+				//app.UsePathBase("/PORTAL");
 
 				app.UseExceptionHandler("/Home/Error");
             }
