@@ -20,17 +20,6 @@ namespace GSA.FMITPortal
         {
             CreateWebHostBuilder(args).Build().Run();
 
-			//var config = new ConfigurationBuilder()
-			//		.AddCommandLine(args)
-			//		.Build();
-
-			//var host = new WebHostBuilder()
-			//	.UseKestrel()
-			//	.UseConfiguration(config)
-			//	.UseStartup<Startup>()
-			//	.Build();
-			//host.Run();
-
 		}
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
@@ -48,6 +37,6 @@ namespace GSA.FMITPortal
 				config.SetBasePath(appsettingsDirectory);
 				config.AddJsonFile("PORTAL_appsettings.json", optional: false, reloadOnChange: true);
 			})
-				.UseStartup<Startup>();
+			.UseStartup<Startup>();
     }
 }
