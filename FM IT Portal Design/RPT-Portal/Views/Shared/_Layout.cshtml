@@ -3,21 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FM IT Reporting</title>
+    <title>@ViewData["Title"] - FM IT Services Portal *** FOR U.S. GOVERNMENT USE ONLY ***</title>
 
     <environment include="Development">
         @* U.S. Web Design System 2.0 *@
         @* Visit https://v2.designsystem.digital.gov for U.S. Web Design System 2.0 user guide and document *@
-        <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/uswds-2.0.0/css/uswds.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     </environment>
     <environment exclude="Development">
         @* Remove BootstrapCDN *@
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/uswds-2.0.0/css/uswds.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     </environment>
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 </head>
 <body class="page-page-templates layout-styleguide">
     <a class="usa-skipnav" href="#main-content">Skip to main content</a>
@@ -63,6 +62,7 @@
         <div class="usa-nav-container">
             <div class="usa-navbar">
                 <div class="usa-logo" id="basic-logo">
+                    <img class="usa-header-slim-logo-img" src="~/images/gsa/nav-logo.jpg" alt="" hspace="5">
                     <em class="usa-logo-text"><a href="/" title="Home" aria-label="Home">FM IT Services</a></em>
                 </div>
                 <button class="usa-menu-btn">Menu</button>
@@ -75,37 +75,42 @@
                 </button>
                 <ul class="usa-nav-primary usa-accordion">
                     <li>
-                        <a class="usa-nav-link" href="/Home/WIP">
+                        <a class="usa-nav-link" href="https://@(ViewBag.hostnamePrefix)fmitservices.gsa.gov/arcs">
+                            <span>ARCS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="usa-nav-link" href="https://@(ViewBag.hostnamePrefix)fmitservices.gsa.gov/cir">
                             <span>CIR</span>
                         </a>
                     </li>
+                    @*<li>
+            <a class="usa-nav-link" href="/Home/WIP">
+                <span>IPAC</span>
+            </a>
+        </li>*@
                     <li>
-                        <a class="usa-nav-link" href="/Home/WIP">
-                            <span>IPAC</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="usa-nav-link" href="https://dev-fmitservices.gsa.gov/nwtb">
+                        <a class="usa-nav-link" href="https://@(ViewBag.hostnamePrefix)fmitservices.gsa.gov/nwtb">
                             <span>NWTB</span>
                         </a>
                     </li>
                     <li>
-                        <a class="usa-nav-link" href="https://finance.ocfo.gsa.gov/VITAP">
+                        <a class="usa-nav-link" href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/VITAP">
                             <span>VITAP</span>
                         </a>
                     </li>
-                    <li>
+                    @*<li>
                         <a class="usa-nav-link" href="https://fedpay.gsa.gov">
                             <span>FEDPAY</span>
                         </a>
-                    </li>
+                    </li>*@
                     <li>
                         <a class="usa-nav-link" href="https://biedw.fas.gsa.gov/FPA/">
                             <span>FPA</span>
                         </a>
                     </li>
                     <li>
-                        <a class="usa-nav-link" href="https://ulo.gsa.gov/">
+                        <a class="usa-nav-link" href="https://@(ViewBag.hostnamePrefix)ulo.gsa.gov/">
                             <span>ULO</span>
                         </a>
                     </li>
@@ -114,28 +119,28 @@
                             <span>Tools &amp; Reports</span>
                         </button>
                         <ul id="basic-nav-section-one" class="usa-nav-submenu">
+                            @*<li>
+                    <a href="/Home/WIP">ARCS</a>
+                </li>*@
                             <li>
-                                <a href="/Home/WIP">ARCS</a>
+                                <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/BillView">BillView</a>
                             </li>
                             <li>
-                                <a href="https://finance.ocfo.gsa.gov/BillView">BillView</a>
+                                <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/InvoiceSearch/">Invoice Search</a>
                             </li>
                             <li>
-                                <a href="https://finance.ocfo.gsa.gov/InvoiceSearch/">Invoice Search</a>
+                                <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/paymentsearch/">Pegasys Payment Search</a>
                             </li>
                             <li>
-                                <a href="https://finance.ocfo.gsa.gov/paymentsearch/">Pegasys Payment Search</a>
+                                <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/worksheets/Msg.aspx">Worksheet Adjustments</a>
                             </li>
-                            <li>
-                                <a href="https://finance.ocfo.gsa.gov/worksheets/Msg.aspx">Worksheet Adjustments</a>
-                            </li>
-                            <li>
-                                <a href="/Home/WIP">WebBill</a>
-                            </li>
+                            @*<li>
+                    <a href="/Home/WIP">WebBill</a>
+                </li>*@
                         </ul>
                     </li>
                 </ul>
-                <form class="usa-search usa-search-small ">
+                @*<form class="usa-search usa-search-small ">
                     <div role="search">
                         <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
                         <input id="basic-search-field-small" type="search" name="search">
@@ -143,7 +148,7 @@
                             <span class="usa-sr-only">Search</span>
                         </button>
                     </div>
-                </form>
+                </form>*@
 
             </nav>
         </div>
@@ -152,51 +157,34 @@
     <main id="main-content"></main>
 
 
-    <partial name="_CookieConsentPartial" />
+    @*<partial name="_CookieConsentPartial" />*@
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer class="usa-footer usa-footer-slim" role="contentinfo">
-            <div class="usa-grid usa-footer-return-to-top">
+            @*<div class="usa-grid usa-footer-return-to-top">
                 <a href="javascript:void(0);">Return to top</a>
-            </div>
+            </div>*@
             <div class="usa-footer-primary-section">
                 <div class="usa-grid">
                     <nav class="usa-footer-nav usa-width-two-thirds">
                         <ul class="usa-unstyled-list">
-                            <li class="usa-width-one-fourth usa-footer-primary-content">
-                                <a class="usa-footer-primary-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <li class="usa-width-one-half usa-footer-primary-content">
+                                <a class="usa-footer-primary-link" href="https://www.gsa.gov/" target="_blank">GSA.gov</a>
                             </li>
-                            <li class="usa-width-one-fourth usa-footer-primary-content">
-                                <a class="usa-footer-primary-link" href="javascript:void(0);">Customer Services</a>
-                            </li>
-                            <li class="usa-width-one-fourth usa-footer-primary-content">
-                                <a class="usa-footer-primary-link" href="javascript:void(0);">GSA.gov</a>
-                            </li>
-                            <li class="usa-width-one-fourth usa-footer-primary-content">
-                                <a class="usa-footer-primary-link" href="javascript:void(0);">Corporate IT Services</a>
+                            <li class="usa-width-one-half usa-footer-primary-content">
+                                <a class="usa-footer-primary-link" href="https://www.gsa.gov/about-us/organization/office-of-the-chief-information-officer/office-of-corporate-it-services" target="_blank">Corporate IT Services</a>
                             </li>
                         </ul>
                     </nav>
-                    <address>
-                        <div class="usa-width-one-third">
-                            <div class="usa-footer-primary-content usa-footer-contact_info">
-                                <p>
-                                    <a href="tel:1-800-555-5555">(800) CALL-FMIT</a>
-                                </p>
-                            </div>
-                            <div class="usa-footer-primary-content usa-footer-contact_info">
-                                <p><a href="mailto:info@agency.gov">fmit-support@gsa.gov</a></p>
-                            </div>
-                        </div>
-                    </address>
-                </div>
-            </div>
-            <div class="usa-footer-secondary_section">
-                <div class="usa-grid">
-                    <div class="usa-footer-logo">
-                        <img class="usa-footer-slim-logo-img" src="~/images/gsa/nav-logo.jpg" alt="">
-                        <h3 class="usa-footer-slim-logo-heading">General Services Administration</h3>
+                    <div class="usa-width-one-third">
+                        <ul class="usa-unstyled-list">
+                            <li>
+                                <address>
+                                    <a class="usa-footer-primary-link" href="mailto:bdf.apps@gsa.gov">Email Us</a>
+                                </address>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

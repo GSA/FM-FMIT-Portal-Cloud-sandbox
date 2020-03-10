@@ -32,6 +32,18 @@ namespace GSA.FMITPortal
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
-				.UseStartup<Startup>();
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    var appsettingsDirectory = Environment.GetEnvironmentVariable("APPSETTINGS_DIRECTORY");
+                    if (String.IsNullOrEmpty(appsettingsDirectory))
+                    {
+                        // Default to appsettings within the app.
+                        string[] paths = { hostingContext.HostingEnvironment.ContentRootPath, "appsettings" };
+                        appsettingsDirectory = Path.Combine(paths);
+                    }
+                    config.SetBasePath(appsettingsDirectory);
+                    config.AddJsonFile("PORTAL_appsettings.json", optional: false, reloadOnChange: true);
+                })
+                .UseStartup<Startup>();
 	}
 }
