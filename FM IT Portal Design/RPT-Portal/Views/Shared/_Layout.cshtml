@@ -120,11 +120,8 @@
                         </button>
                         <ul id="basic-nav-section-one" class="usa-nav-submenu">
                             @*<li>
-                    <a href="/Home/WIP">ARCS</a>
-                </li>*@
-                            <li>
-                                <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/BillView">BillView</a>
-                            </li>
+            <a href="/Home/WIP">ARCS</a>
+        </li>*@
                             <li>
                                 <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/InvoiceSearch/">Invoice Search</a>
                             </li>
@@ -132,11 +129,16 @@
                                 <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/paymentsearch/">Pegasys Payment Search</a>
                             </li>
                             <li>
+                                <a class="usa-nav-link" href="https://@(ViewBag.hostnamePrefix)fmitservices.gsa.gov/rsnap">
+                                    <span>RSNAP</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="https://@(ViewBag.iisPrefix).ocfo.gsa.gov/worksheets/Msg.aspx">Worksheet Adjustments</a>
                             </li>
                             @*<li>
-                    <a href="/Home/WIP">WebBill</a>
-                </li>*@
+            <a href="/Home/WIP">WebBill</a>
+        </li>*@
                         </ul>
                     </li>
                 </ul>
